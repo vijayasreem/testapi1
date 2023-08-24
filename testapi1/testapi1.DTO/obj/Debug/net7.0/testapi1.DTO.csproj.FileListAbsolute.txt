@@ -1,0 +1,11 @@
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1410\202308240438\testapi1\testapi1.DTO\bin\Debug\net7.0\testapi1.DTO.deps.json
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1410\202308240438\testapi1\testapi1.DTO\bin\Debug\net7.0\testapi1.DTO.dll
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1410\202308240438\testapi1\testapi1.DTO\bin\Debug\net7.0\testapi1.DTO.pdb
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1410\202308240438\testapi1\testapi1.DTO\obj\Debug\net7.0\testapi1.DTO.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1410\202308240438\testapi1\testapi1.DTO\obj\Debug\net7.0\testapi1.DTO.AssemblyInfoInputs.cache
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1410\202308240438\testapi1\testapi1.DTO\obj\Debug\net7.0\testapi1.DTO.AssemblyInfo.cs
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1410\202308240438\testapi1\testapi1.DTO\obj\Debug\net7.0\testapi1.DTO.csproj.CoreCompileInputs.cache
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1410\202308240438\testapi1\testapi1.DTO\obj\Debug\net7.0\testapi1.DTO.dll
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1410\202308240438\testapi1\testapi1.DTO\obj\Debug\net7.0\refint\testapi1.DTO.dll
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1410\202308240438\testapi1\testapi1.DTO\obj\Debug\net7.0\testapi1.DTO.pdb
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1410\202308240438\testapi1\testapi1.DTO\obj\Debug\net7.0\ref\testapi1.DTO.dll

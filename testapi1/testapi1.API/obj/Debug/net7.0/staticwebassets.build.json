@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "wKimgoLXVQ1GAbtXikSIJrKfcjeUPZ8DuXT2Ahoi19Q=",
+  "Source": "testapi1.API",
+  "BasePath": "_content/testapi1.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
