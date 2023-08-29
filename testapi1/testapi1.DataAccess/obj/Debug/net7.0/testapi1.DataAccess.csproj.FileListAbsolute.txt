@@ -88,3 +88,11 @@ E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\De
 E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1415\202308251047\testapi1\testapi1.DataAccess\obj\Debug\net7.0\refint\testapi1.DataAccess.dll
 E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1415\202308251047\testapi1\testapi1.DataAccess\obj\Debug\net7.0\testapi1.DataAccess.pdb
 E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1415\202308251047\testapi1\testapi1.DataAccess\obj\Debug\net7.0\ref\testapi1.DataAccess.dll
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1414\202308294744\testapi1\testapi1.DataAccess\obj\Debug\net7.0\testapi1.DataAccess.csproj.AssemblyReference.cache
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1414\202308294744\testapi1\testapi1.DataAccess\obj\Debug\net7.0\testapi1.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1414\202308294744\testapi1\testapi1.DataAccess\obj\Debug\net7.0\testapi1.DataAccess.AssemblyInfoInputs.cache
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1414\202308294744\testapi1\testapi1.DataAccess\obj\Debug\net7.0\testapi1.DataAccess.AssemblyInfo.cs
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1414\202308294744\testapi1\testapi1.DataAccess\obj\Debug\net7.0\testapi1.DataAccess.csproj.CoreCompileInputs.cache
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1414\202308294744\testapi1\testapi1.DataAccess\obj\Debug\net7.0\testapi1.DataAccess.dll
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1414\202308294744\testapi1\testapi1.DataAccess\obj\Debug\net7.0\refint\testapi1.DataAccess.dll
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1414\202308294744\testapi1\testapi1.DataAccess\obj\Debug\net7.0\testapi1.DataAccess.pdb

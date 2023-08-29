@@ -292,3 +292,6 @@ E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\De
 E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1415\202308251047\testapi1\testapi1.API\obj\Debug\net7.0\testapi1.API.pdb
 E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1415\202308251047\testapi1\testapi1.API\obj\Debug\net7.0\testapi1.API.genruntimeconfig.cache
 E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1415\202308251047\testapi1\testapi1.API\obj\Debug\net7.0\ref\testapi1.API.dll
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1414\202308294744\testapi1\testapi1.API\obj\Debug\net7.0\testapi1.API.dll
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1414\202308294744\testapi1\testapi1.API\obj\Debug\net7.0\refint\testapi1.API.dll
+E:\Projects\Sacral\dotnet_service\Application.API\SacralAI.Code.Scheduler\bin\Debug\Apps\1\1414\202308294744\testapi1\testapi1.API\obj\Debug\net7.0\testapi1.API.pdb
