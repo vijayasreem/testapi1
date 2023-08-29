@@ -1,74 +1,101 @@
-﻿namespace testapi1.DTO
-{
-    public class ConfigureGitHubModel
-    {
-        public int Id { get; set; }
-        public string SacralAiUrl { get; set; }
-        public string ExpertServicesPage { get; set; }
-        public string GitHubUrl { get; set; }
-        public string GitHubUsername { get; set; }
-        public string GitHubPassword { get; set; }
-        public string GitHubRepositoryName { get; set; }
-        public string Title { get; set; }
-        public string UserName { get; set; }
-        public string Action { get; set; }
-        public int EntriesToDisplay { get; set; }
-        public int PageNumber { get; set; }
-    }
-}
-
-using testapi1.API.Controllers;
+﻿
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using testapi1.DTO;
 using testapi1.Service;
-using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
-namespace testapi1.API.Controllers
+namespace testapi1.API
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class ConfigureGitHubController : ControllerBase
     {
-        private readonly ConfigureGitHubService _configureGitHubService;
+        private readonly ConfigureGitHubService _service;
 
-        public ConfigureGitHubController(ConfigureGitHubService configureGitHubService)
+        public ConfigureGitHubController(ConfigureGitHubService service)
         {
-            _configureGitHubService = configureGitHubService;
-        }
-
-        [HttpGet("{id}")]
-        public async Task<ActionResult<ConfigureGitHubModel>> GetConfigureGitHubById(int id)
-        {
-            var configureGitHubModel = await _configureGitHubService.GetConfigureGitHubById(id);
-            if (configureGitHubModel == null)
-            {
-                return NotFound();
-            }
-
-            return configureGitHubModel;
+            _service = service;
         }
 
         [HttpPost]
-        public async Task<ActionResult<ConfigureGitHubModel>> CreateConfigureGitHub(ConfigureGitHubModel configureGitHubModel)
+        public async Task<IActionResult> CreateAsync([FromBody] ConfigureGitHubModel model)
         {
-            await _configureGitHubService.CreateConfigureGitHub(configureGitHubModel);
+            try
+            {
+                var id = await _service.CreateAsync(model);
+                return Ok(id);
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions or log errors here
+                return StatusCode(500, ex.Message);
+            }
+        }
 
-            return CreatedAtAction(nameof(GetConfigureGitHubById), new { id = configureGitHubModel.Id }, configureGitHubModel);
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetByIdAsync(int id)
+        {
+            try
+            {
+                var model = await _service.GetByIdAsync(id);
+                if (model == null)
+                {
+                    return NotFound();
+                }
+                return Ok(model);
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions or log errors here
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllAsync()
+        {
+            try
+            {
+                var models = await _service.GetAllAsync();
+                return Ok(models);
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions or log errors here
+                return StatusCode(500, ex.Message);
+            }
         }
 
         [HttpPut]
-        public async Task<ActionResult<ConfigureGitHubModel>> UpdateConfigureGitHub(ConfigureGitHubModel configureGitHubModel)
+        public async Task<IActionResult> UpdateAsync([FromBody] ConfigureGitHubModel model)
         {
-            await _configureGitHubService.UpdateConfigureGitHub(configureGitHubModel);
-
-            return CreatedAtAction(nameof(GetConfigureGitHubById), new { id = configureGitHubModel.Id }, configureGitHubModel);
+            try
+            {
+                await _service.UpdateAsync(model);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions or log errors here
+                return StatusCode(500, ex.Message);
+            }
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteConfigureGitHub(int id)
+        public async Task<IActionResult> DeleteAsync(int id)
         {
-            await _configureGitHubService.DeleteConfigureGitHub(id);
-            return NoContent();
+            try
+            {
+                await _service.DeleteAsync(id);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions or log errors here
+                return StatusCode(500, ex.Message);
+            }
         }
     }
 }

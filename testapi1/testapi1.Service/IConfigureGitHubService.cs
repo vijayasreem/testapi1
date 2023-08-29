@@ -1,10 +1,8 @@
-﻿namespace testapi1.DTO
+﻿public interface IConfigureGitHubService
 {
-    public interface IConfigureGitHubService
-    {
-        Task<ConfigureGitHubModel> HubById(int id);
-        Task<bool> CreateConfigureGitHub(ConfigureGitHubModel configureGitHubModel);
-        Task<bool> UpdateConfigureGitHub(ConfigureGitHubModel configureGitHubModel);
-        Task<bool> DeleteConfigureGitHub(int id);
-    }
+    Task<int> CreateAsync(ConfigureGitHubModel model);
+    Task<ConfigureGitHubModel> GetByIdAsync(int id);
+    Task<List<ConfigureGitHubModel>> GetAllAsync();
+    Task UpdateAsync(ConfigureGitHubModel model);
+    Task DeleteAsync(int id);
 }

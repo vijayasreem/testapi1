@@ -1,82 +1,89 @@
-﻿HubById", connection);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.AddWithValue("@Id", configureGitHubModel.Id);
-                cmd.Parameters.AddWithValue("@SacralAiUrl", configureGitHubModel.SacralAiUrl);
-                cmd.Parameters.AddWithValue("@ExpertServicesPage", configureGitHubModel.ExpertServicesPage);
-                cmd.Parameters.AddWithValue("@GitHubUrl", configureGitHubModel.GitHubUrl);
-                cmd.Parameters.AddWithValue("@GitHubUsername", configureGitHubModel.GitHubUsername);
-                cmd.Parameters.AddWithValue("@GitHubPassword", configureGitHubModel.GitHubPassword);
-                cmd.Parameters.AddWithValue("@GitHubRepositoryName", configureGitHubModel.GitHubRepositoryName);
-                cmd.Parameters.AddWithValue("@Title", configureGitHubModel.Title);
-                cmd.Parameters.AddWithValue("@UserName", configureGitHubModel.UserName);
-                cmd.Parameters.AddWithValue("@Action", configureGitHubModel.Action);
-                cmd.Parameters.AddWithValue("@EntriesToDisplay", configureGitHubModel.EntriesToDisplay);
-                cmd.Parameters.AddWithValue("@PageNumber", configureGitHubModel.PageNumber);
-
-                connection.Open();
-                int i = await cmd.ExecuteNonQueryAsync();
-                connection.Close();
-
-                if (i >= 1)
-                    return true;
-                else
-                    return false;
-            }
-        }
-
-        //Delete ConfigureGitHub
-        public async Task<bool> DeleteConfigureGitHub(int id)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                SqlCommand cmd = new SqlCommand("Delete_ConfigureGitHubById", connection);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                cmd.Parameters.AddWithValue("@Id", id);
-
-                connection.Open();
-                int i = await cmd.ExecuteNonQueryAsync();
-                connection.Close();
-
-                if (i >= 1)
-                    return true;
-                else
-                    return false;
-            }
-        }
-    }
-}
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Threading.Tasks;
+using testapi1.DataAccess;
+using testapi1.DTO;
 
 namespace testapi1.Service
 {
-    public class ConfigureGitHubService
+    public class ConfigureGitHubService : IConfigureGitHubService
     {
-        private readonly IConfigureGitHubRepository _configureGitHubRepository;
+        private readonly IConfigureGitHubRepository _repository;
 
-        public ConfigureGitHubService(IConfigureGitHubRepository configureGitHubRepository)
+        public ConfigureGitHubService(IConfigureGitHubRepository repository)
         {
-            _configureGitHubRepository = configureGitHubRepository;
+            _repository = repository;
         }
 
-        public async Task<ConfigureGitHubModel> GetConfigureGitHubById(int id)
+        public async Task<int> CreateAsync(ConfigureGitHubModel model)
         {
-            return await _configureGitHubRepository.GetConfigureGitHubById(id);
+            try
+            {
+                // Perform any necessary validation or business logic here
+                
+                return await _repository.CreateAsync(model);
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions or log errors here
+                throw;
+            }
         }
 
-        public async Task<bool> CreateConfigureGitHub(ConfigureGitHubModel configureGitHubModel)
+        public async Task<ConfigureGitHubModel> GetByIdAsync(int id)
         {
-            return await _configureGitHubRepository.CreateConfigureGitHub(configureGitHubModel);
+            try
+            {
+                return await _repository.GetByIdAsync(id);
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions or log errors here
+                throw;
+            }
         }
 
-        public async Task<bool> UpdateConfigureGitHub(ConfigureGitHubModel configureGitHubModel)
+        public async Task<List<ConfigureGitHubModel>> GetAllAsync()
         {
-            return await _configureGitHubRepository.UpdateConfigureGitHub(configureGitHubModel);
+            try
+            {
+                return await _repository.GetAllAsync();
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions or log errors here
+                throw;
+            }
         }
 
-        public async Task<bool> DeleteConfigureGitHub(int id)
+        public async Task UpdateAsync(ConfigureGitHubModel model)
         {
-            return await _configureGitHubRepository.DeleteConfigureGitHub(id);
+            try
+            {
+                // Perform any necessary validation or business logic here
+                
+                await _repository.UpdateAsync(model);
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions or log errors here
+                throw;
+            }
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            try
+            {
+                await _repository.DeleteAsync(id);
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions or log errors here
+                throw;
+            }
         }
     }
 }
